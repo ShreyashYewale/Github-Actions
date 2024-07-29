@@ -1,1 +1,20 @@
-hello
+name: Demo
+on:
+    push:
+        branches: ["master"]
+jobs:
+    build-app:
+      runs-on: macos-10.15
+      steps:
+        - name: Run one line script
+          run: echo Hello Shreyash
+        - name: Run a multi line script
+          run: |
+            echo Hello Jack
+            echo Hello There
+    build-db:
+        runs-on: windows-latest
+        steps:
+          - name: Run script
+            run: echo Hey There
+
